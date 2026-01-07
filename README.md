@@ -1,29 +1,27 @@
-# Option-Pricing-Stochastic-Analysis
 # Stochastic Option Pricing: Monte Carlo vs. Black-Scholes
-**Quantitative Finance Project | Stony Brook University**
+**Applied Math Project | Stony Brook University**
 
-## Overview
-This repository contains a Python-based framework for pricing European options using two distinct methodologies: the analytical **Black-Scholes-Merton** model and a numerical **Monte Carlo Simulation**. The project focuses on the valuation of **Omnicom Group Inc. (OMC)** (but any ticker can be used done by yfiance).
+## Why I Built This
+As an Applied Math student, I’ve spent a lot of time learning the theory behind probability and differential equations. I wanted to see how those "abstract" concepts actually play out in the stock market. This project was a way for me to bridge the gap between classroom math and real-world finance by building a tool that handles live market data from `yfinance`.
 
-## Mathematical Foundation
-The model assumes that the underlying asset price follows **Geometric Brownian Motion (GBM)**, defined by the Stochastic Differential Equation:
+##  The Math Behind the Code
+The core of this project is modeling stock price dynamics using **Geometric Brownian Motion (GBM)**. I used the following Stochastic Differential Equation to simulate where a stock might go:
 
 $$dS_t = \mu S_t dt + \sigma S_t dW_t$$
 
-Where:
-- $S_t$: Asset price at time $t$
-- $\mu$: Risk-free rate (drift)
-- $\sigma$: Volatility (diffusion)
-- $W_t$: Wiener process (randomness)
+Instead of just trusting the Black-Scholes formula as a "black box," I built a **Monte Carlo engine** to simulate 10,000 potential future paths for Omnicom Group (OMC). By averaging the payoffs of all those paths and discounting them back to today, I could "discover" the fair price numerically.
 
-## Features
-- **Data Acquisition:** Automated retrieval of 252-day historical data via `yfinance`.
-- **Calibration:** Calculation of annualized volatility ($\sigma = 31.77\%$) and current risk-free rate ($r = 3.97\%$).
-- **Monte Carlo Engine:** 10,000 simulated price paths using NumPy vectorization for computational efficiency.
-- **Validation:** Direct comparison of simulated results against Black-Scholes closed-form solutions to ensure convergence (accuracy within 1.3%).
+## Features & Learnings
+* **Real-Time Data:** I used the `yfinance` API to pull a full year of historical data. Learning to clean and annualize volatility ($\sigma$) was one of the trickiest parts!
+* **Vectorization:** I used **NumPy** to run 10,000 simulations at once. I learned early on that using "for-loops" in Python is way too slow for finance.
+* **Validation:** I compared my simulation results against the **Black-Scholes** analytical solution. My Monte Carlo estimate was within 1.3% of the theoretical price—it was a huge "lightbulb moment" to see the two different methods converge.
 
-## Usage
-Open `Stock_Price_Predictor.ipynb` in a Jupyter environment. The script prompts for a Ticker, Strike Price, and Option Type (Call/Put) to generate fair value estimates.
+## Challenges I Faced
+* **The Volatility Trap:** Originally, my model was off because I didn't realize I needed to multiply the daily return standard deviation by $\sqrt{252}$ to annualize it. 
+* **User Inputs:** I wanted to make the script interactive, so I added `input()` prompts. Now, you can test it with any ticker (like AAPL or TSLA) and any strike price.
 
-## Contact
-**Lia Li** - [LinkedIn](https://linkedin.com/in/lialil)
+## How to Run It
+1. Clone this repo.
+2. Install the requirements: 
+   ```bash
+   pip install yfinance numpy pandas matplotlib scipy
