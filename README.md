@@ -41,4 +41,4 @@ Instead of just trusting the Black-Scholes formula as a "black box," I built a *
 
 ## Contact
 Feel free to connect with me on [LinkedIn](https://linkedin.com/in/lialil) :)
-```
+
