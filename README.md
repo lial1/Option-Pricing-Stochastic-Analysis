@@ -20,23 +20,23 @@ Instead of just trusting the Black-Scholes formula as a "black box," I built a *
 * **The Volatility Trap:** Originally, my model was off because I didn't realize I needed to multiply the daily return standard deviation by $\sqrt{252}$ to annualize it. 
 * **User Inputs:** I wanted to make the script interactive, so I added `input()` prompts. Now, you can test it with any ticker (like AAPL or TSLA) and any strike price.
 
-## 🚀 How to Run It
+## How to Run It
 
 1. **Clone the repo**
-   ```bash
+
    git clone <your-repo-url>
-   ```
+
 
 2. **Install dependencies**
-   ```bash
+ 
    pip install yfinance numpy pandas matplotlib scipy
-   ```
+
 
 3. **Open the notebook**
    - `Stock_Price_Predictor.ipynb`
    - run the cells and follow prompts
 
----
+
 
 
 ## Contact
