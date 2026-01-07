@@ -1,5 +1,5 @@
 # Stochastic Option Pricing: Monte Carlo vs. Black-Scholes
-**Applied Math Project | Stony Brook University**
+**Applied Math Financial Engineering Project | Stony Brook University**
 
 ## Why I Built This
 As an Applied Math student, I’ve spent a lot of time learning the theory behind probability and differential equations. I wanted to see how those "abstract" concepts actually play out in the stock market. This project was a way for me to bridge the gap between classroom math and real-world finance by building a tool that handles live market data from `yfinance`.
