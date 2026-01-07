@@ -3,7 +3,7 @@
 **Quantitative Finance Project | Stony Brook University**
 
 ## Overview
-This repository contains a Python-based framework for pricing European options using two distinct methodologies: the analytical **Black-Scholes-Merton** model and a numerical **Monte Carlo Simulation**. The project focuses on the valuation of **Omnicom Group Inc. (OMC)**.
+This repository contains a Python-based framework for pricing European options using two distinct methodologies: the analytical **Black-Scholes-Merton** model and a numerical **Monte Carlo Simulation**. The project focuses on the valuation of **Omnicom Group Inc. (OMC)** (but any ticker can be used done by yfiance).
 
 ## Mathematical Foundation
 The model assumes that the underlying asset price follows **Geometric Brownian Motion (GBM)**, defined by the Stochastic Differential Equation:
