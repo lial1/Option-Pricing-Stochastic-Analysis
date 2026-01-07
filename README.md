@@ -14,7 +14,7 @@ Instead of just trusting the Black-Scholes formula as a "black box," I built a *
 ## Features & Learnings
 * **Real-Time Data:** I used the `yfinance` API to pull a full year of historical data. Learning to clean and annualize volatility ($\sigma$) was one of the trickiest parts!
 * **Vectorization:** I used **NumPy** to run 10,000 simulations at once. I learned early on that using "for-loops" in Python is way too slow for finance.
-* **Validation:** I compared my simulation results against the **Black-Scholes** analytical solution. My Monte Carlo estimate was within 1.3% of the theoretical price—it was a huge "lightbulb moment" to see the two different methods converge.
+* **Validation:** I compared my simulation results against the **Black-Scholes** analytical solution. My Monte Carlo estimate was within 1.3% of the theoretical price. It was pretty cool to see the two different methods converge.
 
 ## Challenges I Faced
 * **The Volatility Trap:** Originally, my model was off because I didn't realize I needed to multiply the daily return standard deviation by $\sqrt{252}$ to annualize it. 
