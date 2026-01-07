@@ -1,0 +1,6 @@
+```text
+yfinance
+numpy
+pandas
+matplotlib
+scipy
