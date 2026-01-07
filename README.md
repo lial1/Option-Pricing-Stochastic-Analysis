@@ -40,6 +40,6 @@ Instead of just trusting the Black-Scholes formula as a "black box," I built a *
 
 
 ## Contact
-**Lia Li** - [LinkedIn](https://linkedin.com/in/lialil)
-Feel free to connect with me on **LinkedIn** :)
+**Lia Li**
+Feel free to connect with me on **LinkedIn(https://linkedin.com/in/lialil)** :)
 ```
